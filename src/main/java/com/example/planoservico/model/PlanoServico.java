@@ -14,9 +14,11 @@ public class PlanoServico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tituloPlanoServico;
+    private String descricaoPlano;
     private String funcDisponibilizadas;
     private String funcNaoDisponibilizadas;
     private double precoPlanoServico;
     private String prazoPagamentos;
     private String sugestoesUpgrades;
+    private boolean prioridade; // Novo campo para prioridade
 }
