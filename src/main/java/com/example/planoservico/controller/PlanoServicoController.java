@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/plans")
+@CrossOrigin(origins = "http://localhost:3000") // Adicionando a anotação CORS aqui
 public class PlanoServicoController {
 
     @Autowired
