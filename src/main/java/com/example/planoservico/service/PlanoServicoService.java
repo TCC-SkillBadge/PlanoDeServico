@@ -31,11 +31,13 @@ public class PlanoServicoService {
         PlanoServico plan = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("PlanoServico not found with id: " + id));
         plan.setTituloPlanoServico(planDetails.getTituloPlanoServico());
+        plan.setDescricaoPlano(planDetails.getDescricaoPlano());
         plan.setFuncDisponibilizadas(planDetails.getFuncDisponibilizadas());
         plan.setFuncNaoDisponibilizadas(planDetails.getFuncNaoDisponibilizadas());
         plan.setPrecoPlanoServico(planDetails.getPrecoPlanoServico());
         plan.setPrazoPagamentos(planDetails.getPrazoPagamentos());
         plan.setSugestoesUpgrades(planDetails.getSugestoesUpgrades());
+        plan.setPrioridade(planDetails.isPrioridade());
         return repository.save(plan);
     }
 
